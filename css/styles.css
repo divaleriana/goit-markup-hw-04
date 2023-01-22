@@ -140,10 +140,21 @@ img {
     text-align: center;
     padding-top: 188px;
     padding-bottom: 188px;
+    background-image: 
+    linear-gradient(rgba(46,47,66,0.7),
+    rgba(46,47,66,0.7)),
+    url(../images/hero-back-img.jpg) ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 600px;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero-title{
-    font-family: 'Roboto';
+    font-family: 'Roboto';  
     font-style: normal;
     font-weight: 700;
     font-size: 56px;
@@ -180,6 +191,7 @@ img {
     display: flex;
     justify-content: center;
     margin-bottom: 72px;
+    gap: 24px;
 }
 
 .filter{
@@ -194,14 +206,13 @@ img {
     line-height: 1.5;
     letter-spacing: 0.04em;
     cursor: pointer;
-    margin-left: 12px;
-    margin-right: 12px;
     padding: 12px 24px;
 }
 
 .filter:hover, .filter:focus {
     background-color: #404BBF;
-    color: var(--white-color)
+    color: var(--white-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio-item > p{
@@ -220,6 +231,39 @@ img {
     width: 264px;
 }
 
+.feature-item::before {
+    content: "";
+    display: block;
+    height: 112px;
+    background: var(--light-color);
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.feature-item:nth-child(1)::before {
+    background-image: url(../images/satelite.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.feature-item:nth-child(2)::before {
+    background-image: url(../images/clock.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.feature-item:nth-child(3)::before {
+    background-image: url(../images/diagram.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.feature-item:nth-child(4)::before {
+    background-image: url(../images/astronaut.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+ 
 .invisible-title{
     display: none;
 }
@@ -251,7 +295,7 @@ img {
     padding-top: 0;
 }
 
-.works-title, .team-title {
+.works-title, .team-title, .customers-title {
     font-weight: 700;
     font-size: 36px;
     line-height: 1.11;
@@ -289,6 +333,58 @@ img {
     margin-bottom: 8px;
 }
 
+.member-description p {
+    padding-bottom: 8px;
+}
+
+.icons-list {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.social-media-icon {
+    text-decoration: none;
+    display: inline-flex;
+    background-color: var(--iris-color);
+    border-radius: 50%;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    padding: 12px;
+    fill: var(--light-color);
+}
+
+.icon:hover {
+    fill: #404BBF;
+}
+
+.customers-section {
+    padding-top: 130px;
+}
+
+.customers-title {
+    margin-bottom: 72px;
+}
+
+.customers-list {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+.company-item {
+    width: 168px;
+    height: 88px;
+    border: 1px solid #8E8F99;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .img-description{
     padding-top: 32px;
     padding-bottom: 32px;
@@ -311,6 +407,10 @@ img {
     padding-left: 16px;
 }
 
+.portfolio-item:hover {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
 .footer{
     background-color: var(--navy-blue-color);
     padding-top: 100px;
@@ -330,4 +430,36 @@ img {
     letter-spacing: 0.02em;
     color: var(--accent-color);
     width: 264px;
+}
+
+.footer > .container {
+    display: flex;
+}
+
+.media {
+    margin-left: 120px;
+    text-align: start;
+}
+
+.footer-media-title {
+    color: var(--white-color);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1,5;
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.footer-media-list {
+    display: flex;
+    gap: 16px;
+}
+
+.footer-media-icon {
+    text-decoration: none;
+    display: inline-flex;
+    background: rgba(255, 255, 255, 0.1);;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
 }
