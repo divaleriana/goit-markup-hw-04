@@ -183,8 +183,8 @@ img {
 }
 
 .button:hover,
-.button:active {
-    background-color: #404BBF;
+.button:focus {
+    background-color: #404BBF;    
 }
 
 .filter-list {
@@ -196,7 +196,7 @@ img {
 
 .filter{
     color: var(--iris-color);
-    background-color: var(--accent-color);
+    background-color: var(--light-color);
     border: 1px solid var(--accent-color);
     border-radius: 4px;
     height: 48px;
@@ -212,6 +212,7 @@ img {
 .filter:hover, .filter:focus {
     background-color: #404BBF;
     color: var(--white-color);
+    border: 1px solid #404BBF;
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
@@ -349,15 +350,15 @@ img {
     border-radius: 50%;
 }
 
+.social-media-icon:hover, .social-media-icon:focus {
+    background-color: #404bbf;
+}
+
 .icon {
     width: 40px;
     height: 40px;
     padding: 12px;
     fill: var(--light-color);
-}
-
-.icon:hover {
-    fill: #404BBF;
 }
 
 .customers-section {
@@ -378,17 +379,23 @@ img {
     width: 168px;
     height: 88px;
     border: 1px solid #8E8F99;
+    fill: var(--subtle-text-color);
     border-radius: 4px;
     text-decoration: none;
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+}
+
+.company-item:hover, .company-item:focus {
+    fill:#404BBF;
+    border: 1px solid #404bbf;
 }
 
 .img-description{
     padding-top: 32px;
     padding-bottom: 32px;
-    border: 1px solid var(--accent-color);
     background: var(--white-color);
 }
 
@@ -405,6 +412,11 @@ img {
 
 .portfolio-item .img-description {
     padding-left: 16px;
+}
+
+.portfolio-item {
+    border: 0,5px solid #E7E9FC;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-item:hover {
@@ -455,6 +467,11 @@ img {
     gap: 16px;
 }
 
+.footer-media-list > li {
+    width: 40px;
+    height: 40px;
+}
+
 .footer-media-icon {
     text-decoration: none;
     display: inline-flex;
@@ -462,4 +479,14 @@ img {
     border-radius: 50%;
     width: 40px;
     height: 40px;
+}
+
+.footer-media-icon .icon {
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+}
+
+.footer-media-icon:hover, .footer-media-icon:focus {
+    background: #31D0AA;
 }
